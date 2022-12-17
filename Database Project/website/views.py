@@ -43,7 +43,6 @@ def index():
 				
 				cursor.execute("SELECT MAX(receiverID) FROM Receivers")
 				receiverSID = cursor.fetchall()[0][0]
-				print(receiverSID)
 				cursor.execute("INSERT INTO customerinfo.Orders VALUES (%s,%s,%s,%s,%s,%s)",
 					(senderID,receiverSID,orderNum,orderPay,orderWeight,orderDate))
 
