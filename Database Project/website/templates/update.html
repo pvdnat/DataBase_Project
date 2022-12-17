@@ -1,0 +1,96 @@
+{% extends "template.html" %}
+{% block title %}Update Customer{% endblock %}
+
+{% block h1 %}Update a Customer{% endblock %}
+
+{% block content %}
+<form id="updateForm" method="POST">
+    <p><label for="senderID">Enter Customer ID: </label>&emsp;
+    <input type='text' id='senderID' name='senderID'> &emsp;
+    <button type="submit" name="update" value="update">See This Cutomer Info</button>
+    </p>
+
+    {% if boolean == True %}
+        {% autoescape false %}
+        <h2>Customer Information</h2>
+        <p>{{ customer }}</p>
+        <h2>All Receivers</h2>
+        <p>{{ receivers }}</p>
+        <h2>All Orders</h2>
+        <p>{{ orders }}</p>
+        <h2>All Items in Orders</h2>
+        <p>{{ items }}</p>
+        <br>
+        {% endautoescape %}
+    {% endif %}
+
+    <br>
+    <table>
+    <tr>
+        <td>
+            <h2>Customer/Sender Update</h2>
+            <p><label for="newSFname">First Name:</label>
+                <input type='text' id='newSFname' name='newSFname'></p>
+            <p><label for="newSLname">Last Name:</label>
+                <input type='text' id='newSLname' name='newSLname'></p>
+            <p><label for="newSPhone">New Phone#:</label>
+                <input type='text' id='newSPhone' name='newSPhone'></p>
+            <p><label for="newSAddr">New Address:</label>
+                <input type='text' id='newSAddr' name='newSAddr'></p>
+            <p><label for="newSEmail">New Email:</label>
+                <input type='text' id='newSEmail' name='newSEmail'></p>
+            <button type="submit" name="update" value="updateS">Update Customer</button>
+        </td>
+    
+        <td>
+            <h2>Receivers Update</h2>
+            <p><label for="receiverID">Which Receiver ID? (Don't need if Adding) </label>
+                <input type='text' id='receiverID' name='receiverID'></p><br>
+            <p><label for="newRFname">First Name:</label>
+                <input type='text' id='newRFname' name='newRFname'></p>
+            <p><label for="newRLname">Last Name:</label>
+                <input type='text' id='newRLname' name='newRLname'></p>
+            <p><label for="newRPhone">New Phone#:</label>
+                <input type='text' id='newRPhone' name='newRPhone'></p>
+            <p><label for="newRAddr">New Address:</label>
+                <input type='text' id='newRAddr' name='newRAddr'></p>
+            <p><label for="newREmail">New Email:</label>
+                <input type='text' id='newREmail' name='newREmail'></p>
+            <button type="submit" name="update" value="updateR">Update Receiver</button>
+            <button type="submit" name="update" value="addR">Add Receiver</button>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2>Orders Update</h2>
+            <p><label for="orderRID">Receiver ID (If Adding): </label>
+                <input type='text' id='orderRID' name='orderRID'></p><br>
+            <p><label for="orderID">Which Order ID? </label>
+                <input type='text' id='orderID' name='orderID'></p>
+            <p><label for="newPrice">New Price:</label>
+                <input type='text' id='newPrice' name='newPrice'></p>
+            <p><label for="newWeight">New Weight:</label>
+                <input type='text' id='newWeight' name='newWeight'></p>
+            <p><label for="newDate">New Date:</label>
+                <input type='text' id='newDate' name='newDate'></p>
+            <button type="submit" name="update" value="updateO">Update Order</button>
+            <button type="submit" name="update" value="addO">Add Order</button>
+        </td>
+    
+        <td>
+            <h2>Items Update</h2>
+            <p><label for="itemOID">Which Order ID? </label>
+                <input type='text' id='itemOID' name='itemOID'></p>
+            <p><label for="newItems">New List: </label>
+                <input type='text' id='newItems' name='newItems'></p>
+            <p><label for="newType">New Type: </label>
+                <input type='text' id='newType' name='newType'></p>
+            <button type="submit" name="update" value="updateI">Update Items</button>
+            <button type="submit" name="update" value="addI">Add Items</button>
+
+        </td>
+    </tr>
+    </table>
+</form>
+{% endblock %}

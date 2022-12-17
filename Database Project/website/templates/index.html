@@ -1,0 +1,63 @@
+{% extends "template.html" %}
+{% block title %}New Customer{% endblock %}
+
+{% block h1 %}Insert New Customer{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <table>
+    <tr>
+        <td>
+            <h2>Customer/Sender Information</h2>
+            <p><label for="senderID">ID number:</label>
+                <input type='text' id='senderID' name='senderID'></p>
+            <p><label for="senderFname">First name:</label>
+                <input type='text' id='senderFname' name='senderFname'></p>
+            <p><label for="senderLname">Last name:</label>
+                <input type='text' id='senderLname' name='senderLname'></p>
+            <p><label for="senderPhone">Phone number:</label>
+                <input type='text' id='senderPhone' name='senderPhone'></p>
+            <p><label for="senderAddr">Address:</label>  
+                <input type='text' id='senderAddr' name='senderAddr'></p>
+            <p><label for="senderEmail">Email:</label>      
+                <input type='text' id='senderEmail' name='senderEmail'></p>
+        </td>
+        <td>
+            <h2>Receiver Information</h2>
+            <p><label for="receiverFname">First name:</label>
+                <input type='text' id='receiverFname' name='receiverFname'></p>
+            <p><label for="receiverLname">Last name:</label>
+                <input type='text' id='receiverLname' name='receiverLname'></p>
+            <p><label for="receiverPhone">Phone number:</label>
+                <input type='text' id='receiverPhone' name='receiverPhone'></p>
+            <p><label for="receiverAddr">Address:</label>
+                <input type='text' id='receiverAddr' name='receiverAddr'></p>
+            <p><label for="receiverEmail">Email:</label>
+                <input type='text' id='receiverEmail' name='receiverEmail'></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h2>Order Form</h2>
+            <p><label for="orderNum">Order number:</label>
+                <input type='text' id='orderNum' name='orderNum'></p>
+            <p><label for="orderPay">Total Payment:</label>
+                <input type='text' id='orderPay' name='orderPay'></p>
+            <p><label for="orderWeight">Weight:</label>
+                <input type='text' id='orderWeight' name='orderWeight'></p>
+            <p><label for="orderDate">Date:</label>
+                <input type='text' id='orderDate' name='orderDate'></p>
+        </td>
+        <td>
+            <h2>Items in Order</h2>
+            <p><label for="itemName">Item Name:</label>
+                <input type='text' id='itemName' name='itemName'></p>
+            <p><label for="itemType">Type:</label>
+                <input type='text' id='itemType' name='itemType'></p>
+        </td>
+    </tr>
+    </table>
+    <button type="submit" name="insert" value="insert">Submit to DATABASE</button>
+</form>
+{% endblock %}

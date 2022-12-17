@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+{% block title %}Delete Customer{% endblock %}
+
+{% block h1 %}Delete Customer{% endblock %}
+
+{% block content %} 
+<form method="POST">
+    <table>
+    <tr>
+        <td>
+            <h2>Delete Entire Customer/Sender</h2>
+            <p><label for="senderID">Customer ID: </label>
+                <input type="text" id="senderID" name="senderID"></p>
+            <button type="submit" name="delete" value="deleteS">Delete Customer</button>
+        </td>
+    
+        <td>
+            <h2>Delete Receiver</h2>
+            <p><label for="receiverSID">Customer ID: </label>
+                <input type="text" id="receiverSID" name="receiverSID"></p>
+            <p><label for="receiverID">Receiver ID: </label>
+                <input type="text" id="receiverID" name="receiverID"></p>
+            <button type="submit" name="delete" value="deleteR">Delete Receiver</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2>Delete Order</h2>
+            <p><label for="orderID">Order ID: </label>
+                <input type="text" id="orderID" name="orderID"></p>
+            <button type="submit" name="delete" value="deleteO">Delete Order</button>
+        </td>
+    
+        <td>
+            <h2>Delete Items</h2>
+            <p><label for="itemOID">Order ID: </label>
+                <input type="text" id="itemOID" name="itemOID"></p>
+            <button type="submit" name="delete" value="deleteI">Delete Items</button>
+        </td>
+    </tr>
+    </table>
+</form>
+{% endblock %}

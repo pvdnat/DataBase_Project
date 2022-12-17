@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %}</title>
+<style>
+    @import url("../static/style.css");
+</style>
+</head>
+<body>
+    <nav>
+         <div id="flex_container">
+            <div id="insert" class="nav"><a href="index">INSERT NEW CUSTOMER</a></div>
+            <div id="update" class="nav"><a href="update">UPDATE EXISTED CUSTOMER</a></div>
+            <div id="search" class="nav"><a href="search">CUSOTMER SEARCH</a></div>
+            <div id="delete" class="nav"><a href="delete">DELETE CUSTOMER</a></div>
+        </div>
+    </nav>
+
+    <header><h1>{% block h1 %}{% endblock %}</h1></header>
+    
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+
+</body>
+</html>
+    
